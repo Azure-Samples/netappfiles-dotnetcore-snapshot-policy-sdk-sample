@@ -8,7 +8,7 @@ products:
 description: "This project demonstrates how to create a Snapshot Policy for Microsoft.NetApp resource provider using .NETCore SDK.
 ---
 
-# Azure NetAppFiles SDK Sample - Dual-Protocol for .NETCore 
+# Azure NetAppFiles SDK Sample - Snapshot Policy for .NETCore 
 
 This project demonstrates how to use a Java sample application to create a Snapshot Policy for the Microsoft.NetApp
 resource provider.
