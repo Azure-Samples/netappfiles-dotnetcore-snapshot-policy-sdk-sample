@@ -13,7 +13,7 @@ description: "This project demonstrates how to create a Snapshot Policy for Micr
 This project demonstrates how to use a Java sample application to create a Snapshot Policy for the Microsoft.NetApp
 resource provider.
 
-In this sample application we perform the following operations:
+In this sample application we perform the following operations: 
 
 * Creations
     * NetApp Files Account
@@ -108,7 +108,7 @@ The following table describes all files within this solution:
     ```
 1. Make sure you change the variables located at **netappfiles-dotnetcore-dual-protocol-sdk-sample\src\anf-dotnetcore-dual-protocol-sdk-sample\program.cs at RunAsync method.**
 1. Change folder to **netappfiles-dotnetcore-dual-protocol-sdk-sample\src\anf-dotnetcore-dual-protocol-sdk-sample**
-1. Since we're using service principal authentication flow, make sure you have the **azureauth.json** and its environment variable with the path to it defined (as previously described)
+1. Since we're using service principal authentication flow, make sure you have the **azureauth.json** and its environment variable with the path to it defined (as previously described).
 1. Build the console application
     ```powershell
     dotnet build
