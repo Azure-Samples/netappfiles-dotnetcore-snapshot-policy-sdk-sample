@@ -29,9 +29,9 @@ In this sample application we perform the following operations:
     * Account 
 
 >Note: The cleanup execution is disabled by default. If you want to run this end to end with the cleanup, please
->change value of boolean variable 'shouldCleanup' in program.cs
+>change value of boolean variable 'shouldCleanup' in program.cs.
 
-If you don't already have a Microsoft Azure subscription, you can get a FREE trial account [here](http://go.microsoft.com/fwlink/?LinkId=330212). 
+If you don't already have a Microsoft Azure subscription, you can get a FREE trial account [here](http://go.microsoft.com/fwlink/?LinkId=330212).  
 
 ## Prerequisites
 
