@@ -11,7 +11,7 @@ description: "This project demonstrates how to create a Snapshot Policy for Micr
 # Azure NetAppFiles SDK Sample - Snapshot Policy for .NETCore 
 
 This project demonstrates how to use a Java sample application to create a Snapshot Policy for the Microsoft.NetApp
-resource provider.
+resource provider. 
 
 In this sample application we perform the following operations: 
 
@@ -53,7 +53,7 @@ If you don't already have a Microsoft Azure subscription, you can get a FREE tri
         az ad sp create-for-rbac --sdk-auth
         ```
 
-        >Note: this command will automatically assign RBAC contributor role to the service principal at subscription level, you can narrow down the scope to the specific resource group where your tests will create the resources.
+        >Note: this command will automatically assign RBAC contributor role to the service principal at subscription level, you can narrow down the scope to the specific resource group where your tests will create the resources. 
 
     1. Copy the output content and paste it in a file called azureauth.json, secure it with file system permissions and save it outside the tree related of your 	local git repo folder so the file doesn't get commited. 
     1. Set an environment variable pointing to the file path you just created, here is an example with Powershell and bash:
