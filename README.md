@@ -13,7 +13,7 @@ description: "This project demonstrates how to create a Snapshot Policy for Micr
 This project demonstrates how to use a Java sample application to create a Snapshot Policy for the Microsoft.NetApp
 resource provider. 
 
-In this sample application we perform the following operations: 
+In this sample application we perform the following operations:
 
 * Creations
     * NetApp Files Account
@@ -51,7 +51,7 @@ If you don't already have a Microsoft Azure subscription, you can get a FREE tri
     1. Create a service principal using Azure CLI
         ```bash
         az ad sp create-for-rbac --sdk-auth
-        ```
+        ``` 
 
         >Note: this command will automatically assign RBAC contributor role to the service principal at subscription level, you can narrow down the scope to the specific resource group where your tests will create the resources. 
 
@@ -83,7 +83,7 @@ If any of the earlier operations fail for any reason, the cleanup of resources w
 A Snapshot Policy uses schedules to create snapshots of Volumes that can be **hourly**, **daily**, **weekly**, **monthly**.
 The Snapshot Policy will also determine how many snapshots to keep.
 The sample will create a Snapshot Policy with all schedules and then update a single schedule within the policy, changing
-the value of the schedule's snapshots to keep.
+the value of the schedule's snapshots to keep. 
 
 # How the project is structured
 
