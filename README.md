@@ -5,7 +5,7 @@ languages:
 products:
 - azure
 - azure-netapp-files
-description: "This project demonstrates how to create a Snapshot Policy for Microsoft.NetApp resource provider using .NETCore SDK.
+description: This project demonstrates how to create a Snapshot Policy for Microsoft.NetApp resource provider using .NETCore SDK.
 ---
 
 # Azure NetAppFiles SDK Sample - Snapshot Policy for .NETCore 
