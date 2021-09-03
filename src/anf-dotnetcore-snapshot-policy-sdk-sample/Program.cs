@@ -13,6 +13,7 @@ namespace Microsoft.Azure.Management.ANF.Samples
     using System.Threading;
     using System.Threading.Tasks;
     using static Microsoft.Azure.Management.ANF.Samples.Common.Utils;
+    using static Microsoft.Azure.Management.ANF.Samples.Common.ResourceUriUtils;
 
     class Program
     {
@@ -21,18 +22,16 @@ namespace Microsoft.Azure.Management.ANF.Samples
         // Please NOTE: Resource Group and VNETs need to be created prior to run this code
         //----------------------------------------------------------------------------------------------------------------------
 
-        // Subscription - Change SubId below
         const string subscriptionId = "<Subscription ID>";
-
         const string resourceGroupName = "<Resource Group Name>";
         const string location = "westus";
-        const string subnetId = "<Subnet ID>";
-        const string anfAccountName = "anftestaccount";
+        const string subnetId = "<Subnet ID>";        
+        const string anfAccountName = "anfaccount1";
         const string snapshotPolicyName = "snapshotpolicy01";
-        const string capacityPoolName = "anfprimarypool";
+        const string capacityPoolName = "anfpool1";
         const string capacityPoolServiceLevel = "Standard";
         const long capacitypoolSize = 4398046511104;  // 4TiB which is minimum size
-        const string anfVolumeName = "anftestvolume";
+        const string anfVolumeName = "anfvol1";
         const long volumeSize = 107374182400;  // 100GiB - volume minimum size    
 
         // If resources should be cleaned up
@@ -112,7 +111,7 @@ namespace Microsoft.Azure.Management.ANF.Samples
             WriteConsoleMessage($"\tVolume Resource Id: {newVolume.Id}");
 
             WriteConsoleMessage($"Waiting for {newVolume.Id} to be available...");
-            await ResourceUriUtils.WaitForAnfResource<Volume>(anfClient, newVolume.Id);
+            await WaitForAnfResource<Volume>(anfClient, newVolume.Id);
 
             //----------------------
             // Updating Snapshot Policy
@@ -123,7 +122,8 @@ namespace Microsoft.Azure.Management.ANF.Samples
                 location,
                 anfAccountName,
                 snapshotPolicyName,
-                newSnapshotPolicy.HourlySchedule);            
+                newSnapshotPolicy.HourlySchedule);
+            //await WaitForAnfResource<SnapshotPolicy>(anfClient, currentSnapshotPolicy.Id);
             WriteConsoleMessage($"\tSnapshot resource has been updating successfully. Id: {currentSnapshotPolicy.Id}");
 
             if(shouldCleanUp)
@@ -132,27 +132,25 @@ namespace Microsoft.Azure.Management.ANF.Samples
                 WriteConsoleMessage("Cleaning up ANF resources");
                 WriteConsoleMessage("-------------------------");
 
-                WriteConsoleMessage("waiting for snapshot policy to complete updating before start cleaning up resources.");
-                Thread.Sleep(5000);
-
                 // Deleting Volume in the secondary pool first
                 WriteConsoleMessage("Deleting Volume...");
                 await Deletion.DeleteANFVolumeAsync(anfClient, resourceGroupName, anfAccountName, capacityPoolName, anfVolumeName);
-                await ResourceUriUtils.WaitForNoAnfResource<Volume>(anfClient, newVolume.Id);
+                await WaitForNoAnfResource<Volume>(anfClient, newVolume.Id);
 
                 // Deleting Primary Pool
                 WriteConsoleMessage("Deleting Capacity Pool...");
                 await Deletion.DeleteANFCapacityPoolAsync(anfClient, resourceGroupName, anfAccountName, capacityPoolName);
-                await ResourceUriUtils.WaitForNoAnfResource<CapacityPool>(anfClient, newPool.Id);
+                await WaitForNoAnfResource<CapacityPool>(anfClient, newPool.Id);
 
                 //Deleting Snapshot Policy
                 WriteConsoleMessage("Deleting Snapshot Policy ...");
-                await Deletion.DeleteANFSnapshotPolicy(anfClient, resourceGroupName, anfAccountName, snapshotPolicyName);                
+                await Deletion.DeleteANFSnapshotPolicy(anfClient, resourceGroupName, anfAccountName, snapshotPolicyName);
+                await WaitForNoAnfResource<SnapshotPolicy>(anfClient, currentSnapshotPolicy.Id);
 
                 //Deleting Account
                 WriteConsoleMessage("Deleting Account ...");
                 await Deletion.DeleteANFAccountAsync(anfClient, resourceGroupName, anfAccountName);
-                await ResourceUriUtils.WaitForNoAnfResource<NetAppAccount>(anfClient, newAccount.Id);               
+                await WaitForNoAnfResource<NetAppAccount>(anfClient, newAccount.Id);               
             }
         }
     }
