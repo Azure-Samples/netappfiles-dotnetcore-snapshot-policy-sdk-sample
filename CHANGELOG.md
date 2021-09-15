@@ -3,10 +3,11 @@
 [1.0.1 (2021-09-02)](#1.0.1 (2021-09-02))
 [1.0.0 (2020-11-02)](#1.0.0 (2020-11-02))
 
-# 1.0.0 (2020-11-02)
+# 1.0.1 (2021-09-02)
 
 *Features*
 * Upgraded NetApp Files SDK version to 1.13.0
+* Upgraded target framework to NET 5.0 
 
 *Bug Fixes*
 * N/A

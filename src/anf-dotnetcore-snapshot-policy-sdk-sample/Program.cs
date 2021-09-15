@@ -123,7 +123,7 @@ namespace Microsoft.Azure.Management.ANF.Samples
                 anfAccountName,
                 snapshotPolicyName,
                 newSnapshotPolicy.HourlySchedule);
-            //await WaitForAnfResource<SnapshotPolicy>(anfClient, currentSnapshotPolicy.Id);
+            await WaitForAnfResource<SnapshotPolicy>(anfClient, currentSnapshotPolicy.Id);
             WriteConsoleMessage($"\tSnapshot resource has been updating successfully. Id: {currentSnapshotPolicy.Id}");
 
             if(shouldCleanUp)
