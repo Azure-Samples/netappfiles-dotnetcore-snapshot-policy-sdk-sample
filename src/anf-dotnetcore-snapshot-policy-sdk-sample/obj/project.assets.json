@@ -1,8 +1,8 @@
 {
   "version": 3,
   "targets": {
-    ".NETCoreApp,Version=v3.1": {
-      "Microsoft.Azure.Management.NetApp/1.7.0": {
+    "net5.0": {
+      "Microsoft.Azure.Management.NetApp/1.13.0": {
         "type": "package",
         "dependencies": {
           "Microsoft.Rest.ClientRuntime": "[2.3.20, 3.0.0)",
@@ -17,10 +17,10 @@
           "lib/netstandard2.0/Microsoft.Azure.Management.NetApp.dll": {}
         }
       },
-      "Microsoft.Identity.Client/4.22.0": {
+      "Microsoft.Identity.Client/4.36.0": {
         "type": "package",
         "compile": {
-          "ref/netcoreapp2.1/Microsoft.Identity.Client.dll": {}
+          "lib/netcoreapp2.1/Microsoft.Identity.Client.dll": {}
         },
         "runtime": {
           "lib/netcoreapp2.1/Microsoft.Identity.Client.dll": {}
@@ -202,7 +202,7 @@
           "System.Xml.XDocument": "4.3.0"
         }
       },
-      "Newtonsoft.Json/12.0.3": {
+      "Newtonsoft.Json/13.0.1": {
         "type": "package",
         "compile": {
           "lib/netstandard2.0/Newtonsoft.Json.dll": {}
@@ -1492,10 +1492,10 @@
     }
   },
   "libraries": {
-    "Microsoft.Azure.Management.NetApp/1.7.0": {
-      "sha512": "PZoWnSW3pIGPt1NNXF92yOZRzDqP0s8fGwwiJXYw6qrLaIUkaqmuVDZZHQFjNidr/CdgavgHZ3C4YLrSfSggfQ==",
+    "Microsoft.Azure.Management.NetApp/1.13.0": {
+      "sha512": "OwTML+/RNPHUtBsj0ekWON3vLS/iJWFapSonJYEvZiHUo3v0ktEFH34R6rhyRoKpwtWEv1vFde5rB2/Mwjxtqg==",
       "type": "package",
-      "path": "microsoft.azure.management.netapp/1.7.0",
+      "path": "microsoft.azure.management.netapp/1.13.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -1511,14 +1511,14 @@
         "lib/netstandard2.0/Microsoft.Azure.Management.NetApp.dll",
         "lib/netstandard2.0/Microsoft.Azure.Management.NetApp.runtimeconfig.json",
         "lib/netstandard2.0/Microsoft.Azure.Management.NetApp.xml",
-        "microsoft.azure.management.netapp.1.7.0.nupkg.sha512",
+        "microsoft.azure.management.netapp.1.13.0.nupkg.sha512",
         "microsoft.azure.management.netapp.nuspec"
       ]
     },
-    "Microsoft.Identity.Client/4.22.0": {
-      "sha512": "GlamU9rs8cSVIx9WSGv5QKpt66KkE+ImxNa/wNZZUJ3knt3PM98T9sOY8B7NcEfhw7NoxU2/0TSOcmnRSJQgqw==",
+    "Microsoft.Identity.Client/4.36.0": {
+      "sha512": "iSBniRMwVwpdlkOcFmAJmXSNhDm0rhbadtO16kg+80Y2wxR2oIOSyxtW9fAQDyS0xN2epbD7ZTJ9nFLzwiU1kg==",
       "type": "package",
-      "path": "microsoft.identity.client/4.22.0",
+      "path": "microsoft.identity.client/4.36.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -1530,6 +1530,8 @@
         "lib/net45/Microsoft.Identity.Client.xml",
         "lib/net461/Microsoft.Identity.Client.dll",
         "lib/net461/Microsoft.Identity.Client.xml",
+        "lib/net5.0-windows10.0.17763/Microsoft.Identity.Client.dll",
+        "lib/net5.0-windows10.0.17763/Microsoft.Identity.Client.xml",
         "lib/netcoreapp2.1/Microsoft.Identity.Client.dll",
         "lib/netcoreapp2.1/Microsoft.Identity.Client.xml",
         "lib/netstandard1.3/Microsoft.Identity.Client.dll",
@@ -1541,26 +1543,8 @@
         "lib/xamarinios10/Microsoft.Identity.Client.xml",
         "lib/xamarinmac20/Microsoft.Identity.Client.dll",
         "lib/xamarinmac20/Microsoft.Identity.Client.xml",
-        "microsoft.identity.client.4.22.0.nupkg.sha512",
-        "microsoft.identity.client.nuspec",
-        "ref/MonoAndroid10.0/Microsoft.Identity.Client.dll",
-        "ref/MonoAndroid10.0/Microsoft.Identity.Client.xml",
-        "ref/MonoAndroid9.0/Microsoft.Identity.Client.dll",
-        "ref/MonoAndroid9.0/Microsoft.Identity.Client.xml",
-        "ref/Xamarin.iOS10/Microsoft.Identity.Client.dll",
-        "ref/Xamarin.iOS10/Microsoft.Identity.Client.xml",
-        "ref/net45/Microsoft.Identity.Client.dll",
-        "ref/net45/Microsoft.Identity.Client.xml",
-        "ref/net461/Microsoft.Identity.Client.dll",
-        "ref/net461/Microsoft.Identity.Client.xml",
-        "ref/netcoreapp2.1/Microsoft.Identity.Client.dll",
-        "ref/netcoreapp2.1/Microsoft.Identity.Client.xml",
-        "ref/netstandard1.3/Microsoft.Identity.Client.dll",
-        "ref/netstandard1.3/Microsoft.Identity.Client.xml",
-        "ref/uap10.0/Microsoft.Identity.Client.dll",
-        "ref/uap10.0/Microsoft.Identity.Client.xml",
-        "ref/xamarinmac20/Microsoft.Identity.Client.dll",
-        "ref/xamarinmac20/Microsoft.Identity.Client.xml"
+        "microsoft.identity.client.4.36.0.nupkg.sha512",
+        "microsoft.identity.client.nuspec"
       ]
     },
     "Microsoft.IdentityModel.Clients.ActiveDirectory/4.3.0": {
@@ -1762,10 +1746,10 @@
         "netstandard.library.nuspec"
       ]
     },
-    "Newtonsoft.Json/12.0.3": {
-      "sha512": "6mgjfnRB4jKMlzHSl+VD+oUc1IebOZabkbyWj2RiTgWwYPPuaK1H97G1sHqGwPlS5npiF5Q0OrxN1wni2n5QWg==",
+    "Newtonsoft.Json/13.0.1": {
+      "sha512": "ppPFpBcvxdsfUonNcvITKqLl3bqxWbDCZIzDWHzjpdAHRFfZe0Dw9HmA0+za13IdyrgJwpkDTDA9fHaxOrt20A==",
       "type": "package",
-      "path": "newtonsoft.json/12.0.3",
+      "path": "newtonsoft.json/13.0.1",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -1784,11 +1768,7 @@
         "lib/netstandard1.3/Newtonsoft.Json.xml",
         "lib/netstandard2.0/Newtonsoft.Json.dll",
         "lib/netstandard2.0/Newtonsoft.Json.xml",
-        "lib/portable-net40+sl5+win8+wp8+wpa81/Newtonsoft.Json.dll",
-        "lib/portable-net40+sl5+win8+wp8+wpa81/Newtonsoft.Json.xml",
-        "lib/portable-net45+win8+wp8+wpa81/Newtonsoft.Json.dll",
-        "lib/portable-net45+win8+wp8+wpa81/Newtonsoft.Json.xml",
-        "newtonsoft.json.12.0.3.nupkg.sha512",
+        "newtonsoft.json.13.0.1.nupkg.sha512",
         "newtonsoft.json.nuspec",
         "packageIcon.png"
       ]
@@ -5380,38 +5360,46 @@
     }
   },
   "projectFileDependencyGroups": {
-    ".NETCoreApp,Version=v3.1": [
-      "Microsoft.Azure.Management.NetApp >= 1.7.0",
-      "Microsoft.Identity.Client >= 4.22.0",
+    "net5.0": [
+      "Microsoft.Azure.Management.NetApp >= 1.13.0",
+      "Microsoft.Identity.Client >= 4.36.0",
       "Microsoft.Rest.ClientRuntime.Azure.Authentication >= 2.4.1",
-      "Newtonsoft.Json >= 12.0.3"
+      "Newtonsoft.Json >= 13.0.1"
     ]
   },
   "packageFolders": {
-    "C:\\Users\\adghabbo\\.nuget\\packages\\": {}
+    "C:\\Users\\adghabbo\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {},
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\NetAppSampleSDK\\netappfiles-dotnetcore-snapshot-policy-sdk-sample\\src\\anf-dotnetcore-snapshot-policy-sdk-sample\\anf-dotnetcore-snapshot-policy-sdk-sample.csproj",
+      "projectUniqueName": "D:\\SDKSamples\\netappfiles-dotnetcore-snapshot-policy-sdk-sample\\src\\anf-dotnetcore-snapshot-policy-sdk-sample\\anf-dotnetcore-snapshot-policy-sdk-sample.csproj",
       "projectName": "anf-dotnetcore-snapshot-policy-sdk-sample",
-      "projectPath": "C:\\NetAppSampleSDK\\netappfiles-dotnetcore-snapshot-policy-sdk-sample\\src\\anf-dotnetcore-snapshot-policy-sdk-sample\\anf-dotnetcore-snapshot-policy-sdk-sample.csproj",
+      "projectPath": "D:\\SDKSamples\\netappfiles-dotnetcore-snapshot-policy-sdk-sample\\src\\anf-dotnetcore-snapshot-policy-sdk-sample\\anf-dotnetcore-snapshot-policy-sdk-sample.csproj",
       "packagesPath": "C:\\Users\\adghabbo\\.nuget\\packages\\",
-      "outputPath": "C:\\NetAppSampleSDK\\netappfiles-dotnetcore-snapshot-policy-sdk-sample\\src\\anf-dotnetcore-snapshot-policy-sdk-sample\\obj\\",
+      "outputPath": "D:\\SDKSamples\\netappfiles-dotnetcore-snapshot-policy-sdk-sample\\src\\anf-dotnetcore-snapshot-policy-sdk-sample\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+      ],
       "configFilePaths": [
         "C:\\Users\\adghabbo\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
-        "netcoreapp3.1"
+        "net5.0"
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
-        "netcoreapp3.1": {
+        "net5.0": {
+          "targetAlias": "net5.0",
           "projectReferences": {}
         }
       },
@@ -5422,15 +5410,16 @@
       }
     },
     "frameworks": {
-      "netcoreapp3.1": {
+      "net5.0": {
+        "targetAlias": "net5.0",
         "dependencies": {
           "Microsoft.Azure.Management.NetApp": {
             "target": "Package",
-            "version": "[1.7.0, )"
+            "version": "[1.13.0, )"
           },
           "Microsoft.Identity.Client": {
             "target": "Package",
-            "version": "[4.22.0, )"
+            "version": "[4.36.0, )"
           },
           "Microsoft.Rest.ClientRuntime.Azure.Authentication": {
             "target": "Package",
@@ -5438,7 +5427,7 @@
           },
           "Newtonsoft.Json": {
             "target": "Package",
-            "version": "[12.0.3, )"
+            "version": "[13.0.1, )"
           }
         },
         "imports": [
@@ -5456,7 +5445,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.402\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.400\\RuntimeIdentifierGraph.json"
       }
     }
   }
